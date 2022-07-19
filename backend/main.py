@@ -72,7 +72,7 @@ def single_game(game_id):
             id': uuid.uuid4().hex,
             'title': post_data.get('title'),
             'genre': post_data.get('genre'),
-            'played': post_data.get('played')
+            'played': post_data.get('played'),
         })
         response_object['message'] = 'Game Updated !'
     return jsonify(response_object)
