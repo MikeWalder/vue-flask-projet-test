@@ -21,6 +21,10 @@ def greetings():
 def shark():
     return("This is a message from the backend ! And it works !! ")
 
+@app.route('/tensor1', methods=['GET'])
+def receive_datas():
+    return("This is TensorFlow !!")
+
 
 GAMES = [
     {
@@ -69,7 +73,7 @@ def single_game(game_id):
         post_data = request.get_json()
         remove_game(game_id)
         GAMES.append({
-            id': uuid.uuid4().hex,
+            'id': uuid.uuid4().hex,
             'title': post_data.get('title'),
             'genre': post_data.get('genre'),
             'played': post_data.get('played'),
