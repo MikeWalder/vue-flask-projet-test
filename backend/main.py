@@ -21,9 +21,9 @@ def greetings():
 def shark():
     return("This is a message from the backend ! And it works !! ")
 
-@app.route('/tensor1', methods=['GET'])
+@app.route('/tensor', methods=['GET'])
 def receive_datas():
-    return("This is TensorFlow !!")
+    return("This is our first TensorFlow application !!")
 
 
 GAMES = [
